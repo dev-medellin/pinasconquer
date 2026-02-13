@@ -19,6 +19,9 @@ return LaravelApplication::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         // Register route middleware aliases
+        $middleware->validateCsrfTokens(except: [
+            'login', // Exclude the login route from CSRF checks
+        ]);
         $middleware->alias([
             'auth' => Authenticate::class,
             'throttle' => ThrottleRequests::class,
