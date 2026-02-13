@@ -18,39 +18,27 @@ return LaravelApplication::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // Register route middleware aliases
-        $middleware->validateCsrfTokens(except: [
-            'login', // Exclude the login route from CSRF checks
-        ]);
+        
+        // Let Laravel handle the 'web' group automatically.
+        // We only need to add our specific customizations here.
+
         $middleware->alias([
             'auth' => Authenticate::class,
             'throttle' => ThrottleRequests::class,
             'bindings' => SubstituteBindings::class,
         ]);
+
+        // If you need to disable CSRF for a specific test, do it like this:
+        // $middleware->validateCsrfTokens(except: ['login']);
+        
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        // Handle database errors
+        // Your existing exception handling...
         $exceptions->render(function (QueryException $e, Request $request) {
             return response()->view('errors.custom', [
                 'status' => 500,
-                'message' => 'Database connection problem. Please try again later.'
+                'message' => 'Database connection problem.'
             ], 500);
         });
-
-        // Handle HTTP exceptions
-        $exceptions->render(function (HttpException $e, Request $request) {
-            return response()->view('errors.custom', [
-                'status' => $e->getStatusCode(),
-                'message' => 'Something went wrong.'
-            ], $e->getStatusCode());
-        });
-
-        // Handle all other exceptions
-        // $exceptions->render(function (Throwable $e, Request $request) {
-        //     return response()->view('errors.custom', [
-        //         'status' => 500,
-        //         'message' => 'Unexpected server error.'
-        //     ], 500);
-        // });
     })
     ->create();
