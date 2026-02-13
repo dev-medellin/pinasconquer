@@ -5,6 +5,7 @@ use Illuminate\Routing\Middleware\ThrottleRequests;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShopController;
 
 Route::view('/', 'pages.home')->name('home');
 // Show registration form (GET)
@@ -13,8 +14,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
     Route::post('/profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.changePassword');
     Route::post('/profile/change-email', [ProfileController::class, 'changeEmail'])->name('profile.changeEmail');
-    Route::view('/shop', 'pages.shop')->name('shop');
+    // Shop route for logged-in users only
+    Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 });
+
 // Show register form
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 
