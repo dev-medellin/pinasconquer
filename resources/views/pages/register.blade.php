@@ -83,7 +83,11 @@
                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-yellow-500 focus:ring-0">
             </div>
             <input type="text" name="website" style="display:none">
-            <div class="bg-gray-800 p-4 rounded-lg flex justify-center items-center border border-gray-700">
+            <div class="bg-gray-800 p-4 rounded-lg flex justify-center items-center border border-gray-700 bottom-6 mb-8">
+                {{-- Include JS once --}}
+                {!! NoCaptcha::renderJs() !!}
+
+                {{-- Display the reCAPTCHA --}}
                 {!! NoCaptcha::display() !!}
             </div>
             {{-- Submit --}}

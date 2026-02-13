@@ -53,9 +53,58 @@
     </div>
 </section>
 
+{{-- ================= SOCIAL MEDIA SECTION ================= --}}
+<section class="py-20 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Social Media</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+
+            {{-- FACEBOOK --}}
+            <div class="bg-gray-900 p-6 rounded-2xl border border-blue-500/30 hover:border-blue-400 transition">
+                <h3 class="text-2xl font-bold text-blue-400 mb-4">Facebook Page</h3>
+                <p class="text-gray-400 mb-4">
+                    Stay updated with server events, updates, and announcements.
+                </p>
+                {{-- Facebook iframe embed --}}
+                <div class="overflow-hidden rounded-lg border border-blue-500 mb-4">
+                    <iframe 
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FYOUR_PAGE&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="100%" 
+                        height="200" 
+                        style="border:none;overflow:hidden" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                </div>
+            </div>
+
+            {{-- DISCORD --}}
+            <div class="bg-gray-900 p-6 rounded-2xl border border-indigo-500/30 hover:border-indigo-400 transition">
+                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Discord Community</h3>
+                <p class="text-gray-400 mb-4">
+                    Join our active Discord server for support and PvP discussions.
+                </p>
+                {{-- Discord iframe embed --}}
+                <div class="overflow-hidden rounded-lg border border-indigo-500">
+                    <iframe 
+                        src="https://discord.com/widget?id=1470633422048329809&theme=dark"
+                        width="100%" 
+                        height="200" 
+                        allowtransparency="true" 
+                        frameborder="0" 
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 {{-- ================= FEATURES SECTION ================= --}}
-<section class="py-20 bg-gray-950">
+<section class="py-20 bg-black">
     <div class="max-w-7xl mx-auto px-6">
 
         <h2 class="text-4xl font-bold text-center text-yellow-400 mb-16">
@@ -98,7 +147,7 @@
 
 
 {{-- ================= ANNOUNCEMENT SECTION ================= --}}
-<section class="py-20 bg-black">
+<section class="py-20 bg-gray-950">
     <div class="max-w-4xl mx-auto text-center px-6">
 
         <h2 class="text-4xl font-bold text-yellow-400 mb-6">
@@ -115,7 +164,7 @@
 </section>
 
 {{-- Screenshots Carousel --}}
-<section class="py-20 bg-gray-950">
+<section class="py-20 bg-black">
     <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Game Screenshots</h2>
 
@@ -155,34 +204,42 @@
     </div>
 </section>
 
-{{-- ================= SOCIAL MEDIA SECTION ================= --}}
-<section class="py-20 bg-black">
+{{-- ================= REVIEWS SECTION ================= --}}
+<section class="py-20 bg-gray-900">
     <div class="max-w-7xl mx-auto px-6">
-<h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Social Media</h2>
-        <div class="grid md:grid-cols-2 gap-10">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-12 text-center">Player Reviews</h2>
 
-            {{-- FACEBOOK --}}
-            <div class="bg-gray-900 p-10 rounded-2xl border border-blue-500/30 hover:border-blue-400 transition">
-                <h3 class="text-2xl font-bold text-blue-400 mb-4">Facebook Page</h3>
-                <p class="text-gray-400 mb-6">
-                    Stay updated with server events, updates, and announcements.
+        <div class="grid md:grid-cols-3 gap-8">
+
+            {{-- Review Card Example --}}
+            <div class="bg-gray-800 p-6 rounded-2xl border border-yellow-500/30 hover:border-yellow-400 transition">
+                <div class="flex items-center mb-4">
+                    <img src="{{ asset('images/faces/5.jpg') }}" alt="User photo" class="w-12 h-12 rounded-full mr-4">
+                    <h3 class="text-lg font-semibold text-yellow-400">Arthur Medellin</h3>
+                </div>
+                <p class="text-gray-300">
+                    "I love this server! The events are exciting, and the community is amazing. Highly recommended!"
                 </p>
-                <a href="#"
-                   class="text-blue-400 font-semibold hover:underline">
-                    Visit Facebook →
-                </a>
             </div>
 
-            {{-- DISCORD --}}
-            <div class="bg-gray-900 p-10 rounded-2xl border border-indigo-500/30 hover:border-indigo-400 transition">
-                <h3 class="text-2xl font-bold text-indigo-400 mb-4">Discord Community</h3>
-                <p class="text-gray-400 mb-6">
-                    Join our active Discord server for support and PvP discussions.
+            <div class="bg-gray-800 p-6 rounded-2xl border border-yellow-500/30 hover:border-yellow-400 transition">
+                <div class="flex items-center mb-4">
+                    <img src="{{ asset('images/faces/10 .jpg') }}" alt="User photo" class="w-12 h-12 rounded-full mr-4">
+                    <h3 class="text-lg font-semibold text-yellow-400">Maria Santos</h3>
+                </div>
+                <p class="text-gray-300">
+                    "Great experience! The server runs smoothly and the PvP events are top-notch. Love it!"
                 </p>
-                <a href="#"
-                   class="text-indigo-400 font-semibold hover:underline">
-                    Join Discord →
-                </a>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-2xl border border-yellow-500/30 hover:border-yellow-400 transition">
+                <div class="flex items-center mb-4">
+                    <img src="{{ asset('images/faces/17.jpg') }}" alt="User photo" class="w-12 h-12 rounded-full mr-4">
+                    <h3 class="text-lg font-semibold text-yellow-400">John Doe</h3>
+                </div>
+                <p class="text-gray-300">
+                    "Friendly community and regular updates. It's the best server I've played on in years!"
+                </p>
             </div>
 
         </div>
@@ -215,5 +272,6 @@ function zoomFadeCarousel() {
     }
 }
 </script>
+<script src="https://discord.com/api/guilds/1470633422048329809/widget.json"></script>
 
 @endsection
