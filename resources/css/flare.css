@@ -1,0 +1,32 @@
+/* 🔥 Sparks Container */
+.sparks-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 🔥 Individual Ember */
+.spark {
+    position: absolute;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: emberRise linear infinite;
+}
+
+/* 🔥 Ember Animation (Wind + Fade) */
+@keyframes emberRise {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50vh) translateX(30px) scale(0.8);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh) translateX(-40px) scale(0.4);
+        opacity: 0;
+    }
+}
