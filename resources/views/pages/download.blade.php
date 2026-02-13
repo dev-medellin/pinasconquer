@@ -22,14 +22,14 @@
             {{-- Clients --}}
             <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
                 <h2 class="text-2xl font-bold text-yellow-400 mb-4">Clients</h2>
-                <p class="text-gray-300 mb-4">Download the full game client to start your adventure.</p>
-                <a href="{{ asset('downloads/client.zip') }}" download
+                <p class="text-gray-300 mb-4">Download the full beta client here.</p>
+                <a href="https://www.mediafire.com/file/u2or7b1z51slr87/PinasConquer.exe/file" download
                    class="inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-yellow-400 transition">
-                   Download Client
+                   Download Beta Client
                 </a>
             </div>
 
-            {{-- Patches --}}
+            Patches
             <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
                 <h2 class="text-2xl font-bold text-yellow-400 mb-4">Patches</h2>
                 <p class="text-gray-300 mb-4">Keep your client up-to-date with the latest patches.</p>
