@@ -16,13 +16,10 @@ Route::middleware('auth')->group(function () {
     Route::view('/shop', 'pages.shop')->name('shop');
 });
 // Show register form
-// Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 
 // // Handle registration
 // Route::post('/register', [RegisterController::class, 'register']);
-Route::get('/register', function () {
-    return redirect()->route('register.disabled');
-});
 Route::view('/rank', 'pages.rank')->name('rank');
 Route::view('/download', 'pages.download')->name('download');
 Route::get('/login', [LoginController::class, 'show'])->name('login');
