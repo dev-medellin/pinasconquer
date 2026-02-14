@@ -4,7 +4,6 @@
 
 @section('content')
 <section class="relative h-screen bg-cover bg-center overflow-hidden"
-<section class="relative h-screen bg-cover bg-center overflow-hidden"
     style="background-image: url('{{ asset('images/hero.jpg') }}');">
 
     <!-- Dark Overlay -->

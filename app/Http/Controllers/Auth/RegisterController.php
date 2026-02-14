@@ -22,7 +22,7 @@ class RegisterController extends Controller
         $validator = Validator::make($request->all(), [
             'username' => 'required|string|alpha_num|unique:accounts,username|min:4|max:16',
             'password' => 'required|string|confirmed|min:6',
-            'email'    => 'required|email|unique:accounts,email',
+            'email'    => 'required|email',
             // 'g-recaptcha-response' => 'required|captcha', // Uncomment when ready
         ]);
 
