@@ -52,7 +52,7 @@ class RegisterController extends Controller
 
             Log::info("New account registered: " . $request->username);
 
-            return redirect()->route('login')->with('success', '🎉 Account created successfully! You can now login.');
+            return redirect()->route('download')->with('success', '🎉 Account created successfully! You can now login.');
 
         } catch (Exception $e) {
             // This catches "Field 'EntityID' doesn't have a default value" etc.

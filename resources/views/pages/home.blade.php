@@ -18,7 +18,7 @@
         <!-- LOGO -->
         <img src="{{ asset('images/logo.png') }}"
              alt="Server Logo"
-             class="w-100 md:w-100 mb-6 drop-shadow-[0_0_25px_rgba(255,140,0,0.9)]">
+             class="w-110 md:w-110 mb-6 drop-shadow-[0_0_25px_rgba(255,140,0,0.9)]">
 
         <!-- Online Players Counter -->
         <div class="relative bg-black/80 px-6 py-3 rounded-xl shadow-xl mb-6">
@@ -54,6 +54,7 @@
 
     </div>
 </section>
+
 
 {{-- ================= SOCIAL MEDIA SECTION ================= --}}
 <section class="py-20 bg-gray-950">
