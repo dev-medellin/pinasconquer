@@ -15,7 +15,21 @@
                 Download the latest Conquer Online client, patches, and fix flash files to play on our server.
             </p>
         </div>
+        <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 5000)" 
+            class="fixed top-24 left-1/2 -translate-x-1/2 z-50 w-full max-w-lg px-6">
+            
+            @if(session('success'))
+                <div class="bg-green-600 text-white font-bold px-6 py-3 rounded-2xl shadow-xl border-2 border-green-400 animate-bounce">
+                    ✅ {{ session('success') }}
+                </div>
+            @endif
 
+            @if(session('error'))
+                <div class="bg-red-600 text-white font-bold px-6 py-3 rounded-2xl shadow-xl border-2 border-red-400 animate-bounce">
+                    ❌ {{ session('error') }}
+                </div>
+            @endif
+        </div>
         {{-- Download Sections --}}
         <div class="grid md:grid-cols-3 gap-8">
 

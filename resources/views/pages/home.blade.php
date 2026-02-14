@@ -3,8 +3,7 @@
 @section('title', 'Home - Conquer Online')
 
 @section('content')
-<section class="relative h-screen bg-cover bg-center overflow-hidden"
-    style="background-image: url('{{ asset('images/hero.jpg') }}');">
+<section class="relative h-screen bg-cover bg-center overflow-hidden" style="background-image: url('{{ asset('images/hero.jpg') }}');">
 
     <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black/75 z-0"></div>
@@ -55,12 +54,10 @@
         <div class="flex gap-6 flex-wrap justify-center">
             <a href="{{ route('register') }}"
                class="bg-yellow-500 text-black px-8 py-3 rounded-xl text-lg font-bold hover:bg-yellow-400 transition shadow-lg hover:shadow-orange-500/50">
-               class="bg-yellow-500 text-black px-8 py-3 rounded-xl text-lg font-bold hover:bg-yellow-400 transition shadow-lg hover:shadow-orange-500/50">
                 Join Now
             </a>
 
             <a href="{{ route('rank') }}"
-               class="border border-yellow-500 text-yellow-400 px-8 py-3 rounded-xl text-lg font-bold hover:bg-yellow-500 hover:text-black transition shadow-lg hover:shadow-orange-500/50">
                class="border border-yellow-500 text-yellow-400 px-8 py-3 rounded-xl text-lg font-bold hover:bg-yellow-500 hover:text-black transition shadow-lg hover:shadow-orange-500/50">
                 View Rankings
             </a>
@@ -74,7 +71,6 @@
 <section class="py-20 bg-gray-950">
     <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Server Community</h2>
-        <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Server Community</h2>
         <div class="grid md:grid-cols-2 gap-10">
 
             {{-- FACEBOOK --}}
@@ -84,18 +80,6 @@
                     Stay updated with server events, updates, and announcements.
                 </p>
                 {{-- Facebook iframe embed --}}
-                  <div class="overflow-hidden rounded-lg border border-blue-500 mb-4 bg-white">
-                        <iframe 
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpinasconquer&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                            width="100%" 
-                            height="500" 
-                            style="border:none; overflow:hidden; display:block;" 
-                            scrolling="no" 
-                            frameborder="0" 
-                            allowfullscreen="true" 
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                        </iframe>
-                    </div>
                   <div class="overflow-hidden rounded-lg border border-blue-500 mb-4 bg-white">
                         <iframe 
                             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpinasconquer&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
