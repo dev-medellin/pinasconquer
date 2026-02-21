@@ -19,9 +19,10 @@ Route::middleware(['web', 'auth'])->group(function () {
 });
 
 // Show register form
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::view('/AutoPatch/index', 'pages.AutoPatch')->name('AutoPatch');
 
 // // Handle registration
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 Route::view('/rank', 'pages.rank')->name('rank');
 Route::view('/download', 'pages.download')->name('download');
