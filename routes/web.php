@@ -19,7 +19,7 @@ Route::middleware(['web', 'auth'])->group(function () {
 });
 
 // Show register form
-Route::view('/AutoPatch/index', 'pages.AutoPatch')->name('AutoPatch');
+Route::view('/AutoPatch/index', 'pages.AutoPatch.index')->name('AutoPatch');
 
 // // Handle registration
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
