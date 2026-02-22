@@ -3,7 +3,9 @@
         <div class="flex justify-between items-center h-16">
 
             <a href="{{ route('home') }}" class="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 truncate pr-4">
-                Pinas Conquer <span class="hidden xs:inline">[PVP Server]</span>
+                <img src="{{ asset('images/logo_top.png') }}"
+             alt="Server Logo"
+             class="w-30 md:w-30 mb-6 mt-6">
             </a>
 
             <div class="md:hidden">

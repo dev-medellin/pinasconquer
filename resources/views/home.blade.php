@@ -15,7 +15,7 @@
         {{-- LOGO --}}
         <img src="{{ asset('images/logo.png') }}"
              alt="Server Logo"
-             class="w-40 md:w-56 mb-6 drop-shadow-[0_0_25px_rgba(255,215,0,0.8)]">
+             class="w-110 md:w-110 mb-6 drop-shadow-[0_0_25px_rgba(255,215,0,0.8)]">
 
         {{-- TITLE --}}
         <h1 class="text-5xl md:text-7xl font-extrabold text-yellow-400 mb-6">
