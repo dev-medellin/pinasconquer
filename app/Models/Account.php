@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Support\Conquer;
+use Carbon\Carbon;
 
 class Account extends Authenticatable
 {
@@ -26,4 +28,57 @@ class Account extends Authenticatable
     ];
 
     protected $hidden = ['Password', 'remember_token'];
+
+    /*
+    |--------------------------------------------------------------------------
+    | AUTO TRANSLATED ATTRIBUTES
+    |--------------------------------------------------------------------------
+    */
+
+    public function getClassNameAttribute()
+    {
+        return Conquer::className($this->class);
+    }
+
+    public function getMapNameAttribute()
+    {
+        return Conquer::mapName($this->map);
+    }
+
+    public function getGuildRankNameAttribute()
+    {
+        return Conquer::guildRank($this->guildRank);
+    }
+
+     /*
+    |--------------------------------------------------------------------------
+    | WINDOWS TICKS → DATE CONVERTER
+    |--------------------------------------------------------------------------
+    */
+
+    private function ticksToDate($ticks)
+    {
+        if (!$ticks || $ticks <= 0) {
+            return null;
+        }
+
+        $unixTimestamp = ($ticks - 621355968000000000) / 10000000;
+
+        return Carbon::createFromTimestamp($unixTimestamp);
+    }
+
+    public function getVipTimeDateAttribute()
+    {
+        return $this->ticksToDate($this->vipTime);
+    }
+
+    public function getNobilityExpireDateAttribute()
+    {
+        return $this->ticksToDate($this->nobilityExpire);
+    }
+
+    public function getLastLoginDateAttribute()
+    {
+        return $this->ticksToDate($this->lastLoginClient);
+    }
 }

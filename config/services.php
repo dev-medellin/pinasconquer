@@ -39,5 +39,10 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'vps' => [
+        'url' => env('VPS_API_URL'),
+        'secret' => env('VPS_SECRET'),
+        'items_url' => env('VPS_ITEMS_URL'),
+    ],
 
 ];

@@ -6,22 +6,30 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use App\Services\VpsUserService;
+use App\Services\VpsItemService;
 
 class ProfileController extends Controller
 {
     /**
      * Show profile page
      */
-    public function show()
+    public function show(VpsUserService $vps,VpsItemService $itemsService)
     {
         $user = Auth::user();
 
-        // Example: get rank info from database if needed
-        $user->rank = $user->level; // placeholder
-        $user->cps = $user->cps ?? 0;
-        $user->gold = $user->gold ?? 0;
+        $entityId = $user->EntityID;
 
-        return view('pages.profile', compact('user'));
+        $userData = $vps->getUserByEntityId($entityId);
+        $items = $itemsService->getItemsByEntityId($entityId);
+        if ($userData && isset($userData['data'])) {
+
+            foreach ($userData['data'] as $key => $value) {
+                $user->{$key} = $value;
+            }
+        }
+
+        return view('pages.profile', compact('user', 'items'));
     }
 
     /**
