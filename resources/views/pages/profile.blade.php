@@ -4,8 +4,6 @@
 
 @section('content')
 
-@php use Illuminate\Support\Number; @endphp
-
 <section class="min-h-screen bg-gray-950 py-16 px-6">
 
 <div class="max-w-7xl mx-auto">
