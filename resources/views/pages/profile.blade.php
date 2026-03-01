@@ -183,6 +183,37 @@
 
         </div>
 
+        @php
+        $equipment = collect($items)
+            ->where('location','equipped');
+        @endphp
+        {{-- ================= Equipment GRID ================= --}}
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-yellow-400 mb-6">Equipment</h2>
+
+            <div class="grid grid-cols-8 gap-4">
+                @foreach($equipment as $slot => $item)
+                    <x-item-slot :item="$item" />
+                @endforeach
+            </div>
+        </div>
+
+        @php
+        $inventory = collect($items)
+            ->where('location','inventory');
+        @endphp
+        {{-- ================= INVENTORY GRID ================= --}}
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-yellow-400 mb-6">Inventory</h2>
+
+            <div class="grid grid-cols-8 gap-4">
+                @foreach($inventory as $item)
+                    <x-item-slot :item="$item" />
+                @endforeach
+            </div>
+        </div>
+
+        
 
     </div>
 

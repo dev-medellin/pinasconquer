@@ -22,6 +22,7 @@ class ProfileController extends Controller
 
         $userData = $vps->getUserByEntityId($entityId);
         $items = $itemsService->getItemsByEntityId($entityId);
+        // dd($items);
         if ($userData && isset($userData['data'])) {
 
             foreach ($userData['data'] as $key => $value) {

@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\RankController;
 
 Route::view('/', 'pages.home')->name('home');
 // Show registration form (GET)
@@ -24,7 +25,7 @@ Route::view('/AutoPatch/index', 'pages.AutoPatch.index')->name('AutoPatch');
 // // Handle registration
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
-Route::view('/rank', 'pages.rank')->name('rank');
+Route::get('/rank', [RankController::class, 'index'])->name('rank');
 Route::view('/download', 'pages.download')->name('download');
 Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');

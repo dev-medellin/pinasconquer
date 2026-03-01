@@ -43,6 +43,7 @@ return [
         'url' => env('VPS_API_URL'),
         'secret' => env('VPS_SECRET'),
         'items_url' => env('VPS_ITEMS_URL'),
+        'rank_url' => env('VPS_RANK_URL'),
     ],
 
 ];
