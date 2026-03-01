@@ -24,7 +24,9 @@
         <!-- LOGO -->
         <img src="{{ asset('images/logo23.png') }}"
              alt="Server Logo"
-             class="w-210 md:w-210 mb-2 drop-shadow-[0_0_25px_rgba(255,140,0,0.9)]">
+             class="w-110 md:w-110 mb-2 drop-shadow-[0_0_25px_rgba(255,140,0,0.9)]" 
+             style="width: 45%;"
+             >
 
         <!-- Online Players Counter -->
         <div class="relative bg-black/80 px-6 py-3 rounded-xl shadow-xl mb-6">
