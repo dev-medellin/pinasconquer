@@ -27,11 +27,13 @@
              class="w-110 md:w-110 mb-2 drop-shadow-[0_0_25px_rgba(255,140,0,0.9)]" 
              style="width: 45%;"
              >
-
+        @php
+            $online = DB::table('servers')->value('online');
+        @endphp
         <!-- Online Players Counter -->
         <div class="relative bg-black/80 px-6 py-3 rounded-xl shadow-xl mb-6">
             <div class="text-yellow-400 text-3xl md:text-4xl font-extrabold tracking-wider animate-pulse drop-shadow-lg">
-                Online : <span id="online-counter">100 Players</span>
+                Online : <span id="online-counter">{{ $online }} Players</span>
             </div>
             <div class="absolute inset-0 rounded-xl bg-orange-500/10 blur-2xl"></div>
             <div class="absolute inset-0 rounded-xl bg-orange-500/10 blur-2xl"></div>
