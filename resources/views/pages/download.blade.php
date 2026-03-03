@@ -36,21 +36,21 @@
             {{-- Clients --}}
             <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
                 <h2 class="text-2xl font-bold text-yellow-400 mb-4">Clients</h2>
-                <p class="text-gray-300 mb-4">Download the full beta client here.</p>
+                <p class="text-gray-300 mb-4">Download the full client here.</p>
                 <a href="https://www.mediafire.com/file/qy1bsx7vuu7pfmj/PinasConquer.rar/file" download
                    class="inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-yellow-400 transition">
                    Download Game Client
                 </a>
             </div>
             {{-- Patches --}}
-            {{-- <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
-                <h2 class="text-2xl font-bold text-yellow-400 mb-4">Patches</h2>
-                <p class="text-gray-300 mb-4">Keep your client up-to-date with the latest patches.</p>
-                <a href="{{ asset('downloads/patch.zip') }}" download
+            <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">Mega Download</h2>
+                <p class="text-gray-300 mb-4">Download the full beta client here.</p>
+                <a href="https://mega.nz/file/G9hxTaSA#vH-kflPDlMtcAMBQAG8oBm3YeayTu6RRnxhcOOpwBlU" download
                    class="inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-yellow-400 transition">
-                   Download Patch
+                   Download Client Mega
                 </a>
-            </div> --}}
+            </div>
 
             {{-- Fix Flash --}}
             {{-- <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
