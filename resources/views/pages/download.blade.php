@@ -34,14 +34,14 @@
         <div class="grid md:grid-cols-3 gap-8">
 
             {{-- Clients --}}
-            {{-- <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
+            <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
                 <h2 class="text-2xl font-bold text-yellow-400 mb-4">Clients</h2>
                 <p class="text-gray-300 mb-4">Download the full client here.</p>
                 <a href="https://www.mediafire.com/file/qy1bsx7vuu7pfmj/PinasConquer.rar/file" download
                    class="inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-yellow-400 transition">
-                   Download Game Client
+                   Download Client Mediafire
                 </a>
-            </div> --}}
+            </div>
             {{-- Patches --}}
             <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
                 <h2 class="text-2xl font-bold text-yellow-400 mb-4">Mega Download</h2>
@@ -51,6 +51,15 @@
                    Download Client Mega (Original Map)
                 </a>
             </div>
+            <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">Mega Download</h2>
+                <p class="text-gray-300 mb-4">Download the full client here.</p>
+                <a href="https://drive.google.com/file/d/1SfuqXKx6MyuEBKLFGTVNgW9-5lPcSGM0/view?usp=sharing" download
+                   class="inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-yellow-400 transition">
+                   Download Client Google Drive (Original Map)
+                </a>
+            </div>
+            
 
             {{-- Fix Flash --}}
             {{-- <div class="bg-black rounded-2xl border border-yellow-500/20 shadow-lg p-6 text-center">
